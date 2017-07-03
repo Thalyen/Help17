@@ -1,0 +1,126 @@
+
+ <!DOCTYPE html>
+ <html>
+  <head>
+    <title>Menu Usuario</title>
+     
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+    <link rel="stylesheet" href="BootstrapPaper.css">
+    <!--CSS do menu-->
+    <link rel="stylesheet" href="Menu.css">
+
+
+  </head>
+
+<body>
+
+<!--MENU -->
+<nav class="navbar navbar-default navbar-static-top"  style="color: #ffffff;">
+  <div class="container-fluid">
+    <div class="navbar-header" style="padding-bottom: 5%">  
+      <a class="navbar-brand"  href="#"><img src="Logo HelpPet.jpg" class="logo_menu"></a>
+    </div>
+    <ul class="navbar-nav navbar-right item">
+      <!--profile picture-->
+        <li class="dropdown">
+          <a href="#"  data-toggle="dropdown"><div class="fb-profile" align ="center" style="margin-right: -28%; margin-top: 80px; ">
+            <img align="right" class="fb-image-profile thumbnail" src="img/xiu.png"  style="margin-left: auto;" alt="Profile image example"/>
+          </div> 
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Meu Perfil <span class="glyphicon glyphicon-user pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Meus Animais <span class="glyphicon glyphicon-heart pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Meus Eventos <span class="glyphicon glyphicon-pushpin pull-right position-dropdown" ></span></a></li>
+                <li><a href="#">Meus Anuncios<span class="glyphicon glyphicon-paperclip pull-right position-dropdown"></span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">Experiências<span class="glyphicon glyphicon-globe pull-right position-dropdown"></span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">Cadastrar Animal<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Cadastrar Evento<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Cadastrar Anuncio<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Cadastrar Denuncia<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">Sair <span class="glyphicon glyphicon-log-out pull-right position-dropdown"></span></a></li>
+         </ul>
+        </li>
+      <!--end profile pic-->
+    </ul>
+  </div>
+
+<!--PART2 NAV-->
+  <nav class="container-fluid menu">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-left: 26%">
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Animais <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">ONGs <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Clinicas <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Pet Shops <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Eventos <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Anúncios <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Denúncias <span class="sr-only"></span></a></li>
+        </ul>
+      </div>
+  </nav>
+<!--end PART2 NAV-->
+</nav>
+<!--END MENU -->
+
+
+
+</body>
+
+<script type="text/javascript">
+
+ $(document).ready(function () {
+    var menu = $('.menu');
+    var origOffsetY = menu.offset().top;
+
+    function scroll() {
+        if ($(window).scrollTop() >= origOffsetY) {
+            $('.menu').addClass('sticky');
+            $('.menu').addClass('label-padding');
+             $('.content').addClass('menu-padding');
+
+
+        } else {
+            $('.menu').removeClass('sticky');
+            $('.content').removeClass('menu-padding');
+            $('.menu').removeClass('label-padding');
+        }
+    }
+
+    document.onscroll = scroll;
+
+}); 
+ //disable active itens on nav
+ $('.nav li').removeClass("active");
+</script>
+
+ </html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Experiências</title>
+
+        <meta charset=utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1">  
+        <!--scripts-->
+        <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <!--CSS-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+
+        <!--CSS paper-->
+        <link rel="stylesheet" href="css/BootstrapPaper.css">
+        <!--Parallax Plugin--> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-parallax/1.1.3/jquery-parallax-min.js"></script> 
+        <!--CSS do menu-->
+        <link rel="stylesheet" href="css/Menu.css">
+        <!--CSS Experiencias-->
+        <!-- scripts de consumo ws -->
+        <script src="js/listarExp.js"></script>
+    </head>
+
+    <body onload="getExperiencias()">
+        <!--MENU -->
+        <nav class="navbar navbar-default navbar-static-top"  style="color: #ffffff;">
+            <div class="container-fluid">
+                <div class="navbar-header" style="padding-bottom: 5%">  
+                    <a class="navbar-brand"  href="#"><img src="img/Logo HelpPet.jpg" class="logo_menu"></a>
+                </div>
+
+                <ul class="navbar-nav navbar-right item">
+                    <!--profile picture-->
+                    <li class="dropdown">
+                        <a href="#"  data-toggle="dropdown"><div class="fb-profile" align ="center" style="margin-right: -28%; margin-top: 80px; ">
+                                <img align="right" class="fb-image-profile thumbnail" src="img/xiu.png"  style="margin-left: auto;" alt="Profile image example"/>
+                            </div> 
+                        </a>
+                        <!--end profile pic-->
+                        <!--itens menu usuario-->
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Meu Perfil <span class="glyphicon glyphicon-user pull-right position-dropdown"></span></a></li>
+                            <li><a href="#">Meus Animais <span class="glyphicon glyphicon-heart pull-right position-dropdown"></span></a></li>
+                            <li><a href="#">Meus Eventos <span class="glyphicon glyphicon-pushpin pull-right position-dropdown" ></span></a></li>
+                            <li><a href="#">Meus Anuncios<span class="glyphicon glyphicon-paperclip pull-right position-dropdown"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Experiências<span class="glyphicon glyphicon-globe pull-right position-dropdown"></span></a></li>
+                            <li><a href="#">Cadastrar Experiência<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Cadastrar Animal<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                            <li><a href="#">Cadastrar Evento<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                            <li><a href="#">Cadastrar Anuncio<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                            <li><a href="#">Cadastrar Denuncia<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Sair <span class="glyphicon glyphicon-log-out pull-right position-dropdown"></span></a></li>
+                        </ul>
+                        <!--end itens menu usuario-->
+                    </li>
+                </ul>
+            </div>
+
+            <!--PART2 NAV-->
+            <nav class="container-fluid menu">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-left: 26%">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="color:#3498db">Animais <span class="sr-only"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="color:#3498db">ONGs <span class="sr-only"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="color:#3498db">Clinicas <span class="sr-only"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="color:#3498db">Pet Shops <span class="sr-only"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="color:#3498db">Eventos <span class="sr-only"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="color:#3498db">Anúncios <span class="sr-only"></span></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" style="color:#3498db">Denúncias <span class="sr-only"></span></a></li>
+                    </ul>
+                </div>
+            </nav>
+            <!--end PART2 NAV-->
+        </nav>
+        <!--END MENU -->
+
+        <!--paralax layout-->
+        <style type="text/css">
+            .parallax {
+                /* Configurações dessa parte não mudam */
+                background-image: url("img/experiencia.jpg");
+                height: 270px;
+                /* paralax */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: -2%;
+            }
+        </style>
+        <!--end paralax layout-->
+
+        <!-- Container Titulo -->
+        <div class="parallax">
+            <div class="header">
+                <div class="">
+                    </br>
+                    </br>
+                    </br>
+                    </br>
+
+                    <h1 style="color: #ffffff;" align="center">Experiências</h1>
+
+                </div> 
+            </div>
+        </div>
+        <!-- end Container Titulo -->
+
+        <!--categorias-->
+        <div class="panel panel-default" style="background-color: #2196f3">
+            <div class="panel-body">
+                <div class="iten_categoria" align="center">
+                    <span class="iten">categoria 1</span>
+                    <span class="iten">categoria 1</span>
+                    <span class="iten">categoria 1</span>
+                    <span class="iten">categoria 1</span>
+                    <span class="iten">categoria 1</span>
+                </div>
+            </div>
+        </div>
+        <!--end categorias-->
+
+
+        <!--Container de cards-->
+        <div class="row" style="padding: 5%" id="lista">
+            <div class="col-md-4">
+                <div class="column"> 
+
+                    <!-- Post-->
+                    <div class="post-module"> 
+                        <!-- Thumbnail-->
+                        <div class="thumbnail">
+                            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/photo-1429043794791-eb8f26f44081.jpeg" class="img-responsive" alt=""> 
+                        </div>
+                        <!-- Post conteudo-->
+                        <div class="post-content">
+                            <div class="category">Categoria3</div>
+                            <h1 class="title">Título</h1>
+                            <h2 class="sub_title">Por: Helora Dana</h2>
+                            <p class="description">New York, the largest city in the U.S., is an architectural marvel with plenty of historic monuments, magnificent buildings and countless dazzling skyscrapers.</p>
+                            <div class="post-meta"><span class="timestamp"><span class="glyphicon glyphicon-dashboard"></span><span>  6 mins ago</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--end Container de cards-->
+
+        <!--Menu fixed scrip-->
+        <script type="text/javascript">
+            $(document).ready(function () {
+                var menu = $('.menu');
+                var origOffsetY = menu.offset().top;
+                function scroll() {
+                    if ($(window).scrollTop() >= origOffsetY) {
+                        $('.menu').addClass('sticky');
+                        $('.menu').addClass('label-padding');
+                        $('.content').addClass('menu-padding');
+                    } else {
+                        $('.menu').removeClass('sticky');
+                        $('.content').removeClass('menu-padding');
+                        $('.menu').removeClass('label-padding');
+                    }
+                }
+                document.onscroll = scroll;
+            });
+            //disable active itens on nav
+            $('.nav li').removeClass("active");
+        </script>
+        <!--end Menu fixed scrip-->
+
+        <!--Cards script-->
+        <script type="text/javascript">
+            $(window).load(function () {
+                $('.post-module').hover(function () {
+                    $(this).find('.description').stop().animate({
+                        height: "toggle",
+                        opacity: "toggle"
+                    }, 300);
+                });
+            });
+            $(window).load(function () {
+                $('.post-module').click(function () {
+                    $(this).find('.description').stop().animate({
+                        height: "toggle",
+                        opacity: "toggle"
+                    }, 300);
+                });
+            });
+        </script>
+        <!--end cards script-->
+
+</html>

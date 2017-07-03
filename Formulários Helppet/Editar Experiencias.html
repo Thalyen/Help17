@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://github.com/makeusabrew/bootbox/releases/download/v4.4.0/bootbox.min.js"></script>
+
+
+
+        <title>Editar Experiencia</title>
+        <!-- CSS -->
+        <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+  	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+  		  <link rel="stylesheet" href="assets/css/form-elements.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+  	    <link rel="stylesheet" href="BootstrapPaper.css">
+  	    <!--CSS do menu-->
+  	    <link rel="stylesheet" href="Menu.css">
+
+	 </head>
+
+<body>
+
+
+<!--MENU -->
+<nav class="navbar navbar-default navbar-static-top"  style="color: #ffffff;">
+  <div class="container-fluid">
+    <div class="navbar-header" style="padding-bottom: 5%">  
+      <a class="navbar-brand"  href="#"><img src="Logo HelpPet.jpg" class="logo_menu"></a>
+    </div>
+    <ul class="navbar-nav navbar-right item">
+      <!--profile picture-->
+        <li class="dropdown">
+          <a href="#"  data-toggle="dropdown"><div class="fb-profile" align ="center" style="margin-right: -28%; margin-top: 80px; ">
+            <img align="right" class="fb-image-profile thumbnail" src="assets/img/xiu.png"  style="margin-left: auto;" alt="Profile image example"/>
+          </div> 
+          </a>
+          <ul class="dropdown-menu">
+                <li><a href="#">Meu Perfil <span class="glyphicon glyphicon-user pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Meus Animais <span class="glyphicon glyphicon-heart pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Meus Eventos <span class="glyphicon glyphicon-pushpin pull-right position-dropdown" ></span></a></li>
+                <li><a href="#">Meus Anuncios<span class="glyphicon glyphicon-paperclip pull-right position-dropdown"></span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">Experiências<span class="glyphicon glyphicon-globe pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Cadastrar Experiência<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">Cadastrar Animal<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Cadastrar Evento<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Cadastrar Anuncio<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li><a href="#">Cadastrar Denuncia<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                <li class="divider"></li>
+                <li><a href="#">Sair <span class="glyphicon glyphicon-log-out pull-right position-dropdown"></span></a></li>
+          </ul>
+        </li>
+      <!--end profile pic-->
+    </ul>
+  </div>
+
+<!--PART2 NAV-->
+  <nav class="container-fluid menu">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+    </div>
+
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-left: 26%">
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Animais <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">ONGs <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Clinicas <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Pet Shops <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Eventos <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Anúncios <span class="sr-only"></span></a></li>
+        </ul>
+        <ul class="nav navbar-nav">
+          <li><a href="#" style="color:#3498db">Denúncias <span class="sr-only"></span></a></li>
+        </ul>
+      </div>
+  </nav>
+<!--end PART2 NAV-->
+</nav>
+<!--END MENU -->
+
+	
+
+<!-- Top content -->
+<div class="top-content">
+  <div class="inner-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 text">
+          <h1>Editar Experiencia</h1>
+          <div class="description">
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3 form-box">
+        <form role="form" action="" method="post" class="registration-form" name="dados">
+          <fieldset>
+		        <div class="form-top">
+		        <div class="form-top-left">
+		          <h3>Título da experiencia</h3>
+		        </div>
+		        <div class="form-top-right">
+		        </div>
+		        </div>
+		        <div class="form-bottom">
+				    <div class="form-group">
+				      <input type="text" name="form-titulo" placeholder="Título" class="form-titulo form-control" id="titulo" required="">
+				    </div>
+				    <div class="form-group">
+							<select class="form-control" id="categoria" required="">
+								<option>Categoria</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+				    </div>
+            <div class="control-group">
+              <label class="control-label"><h5>Foto</h5></label>
+              <div class="controls">
+                <input id="foto" name="foto" class="input-file" type="file">
+              </div>
+            </div>
+            <br/>
+				    <div class="form-group">
+				      <textarea name="form-about-yourself" placeholder="Conte sua experiência!" class="form-about-yourself form-control" id="descricao" required=""></textarea>
+				    </div>
+            <button class="btn btn-danger" onclick="">Cancelar</button>
+            <button style="margin-left: 55%" class="btn btn-success" onclick="">Salvar</button>
+            </div>
+			    </fieldset>
+		    </form>
+      </div>
+    </div>
+  </div>
+ </div>
+</div>
+
+  <!-- Javascript -->
+  <script src="assets/js/jquery-1.11.1.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="assets/js/jquery.backstretch.min.js"></script>
+  <script src="assets/js/background_experiencia.js"></script>
+
+<script>
+
+
+</script>
+
+
+    </body>
+
+</html>
