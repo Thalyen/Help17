@@ -65,7 +65,7 @@ function getAnimais() {
             /*});*/
         }
     };
-    var url = "https://viacep.com.br/ws/01125001/json/";
+    var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/animal";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
