@@ -1,5 +1,6 @@
-function getDenuncias() {
+function getDenuncia() {
     var xmlhttp = new XMLHttpRequest();
+    xmlhttp.withCredentials = false;
 
     xmlhttp.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
@@ -41,7 +42,7 @@ function getDenuncias() {
             });
         }
     };
-        var url = "denuncia";
+        var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/denuncia";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
@@ -253,4 +254,3 @@ function getAdocao() {
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 } 
-                
