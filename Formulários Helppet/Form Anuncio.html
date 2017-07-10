@@ -21,7 +21,8 @@
   	    <link rel="stylesheet" href="BootstrapPaper.css">
   	    <!--CSS do menu-->
   	    <link rel="stylesheet" href="Menu.css">
-
+<!-- scripts de envio ws -->
+          <script src="cadastrar.js"></script>
 	 </head>
 
 <body>
@@ -149,7 +150,7 @@
 				    <div class="form-group">
 				      <textarea name="form-about-yourself" placeholder="Descreva seu anúncio se desejar!" class="form-about-yourself form-control" id="descricao"></textarea>
 				    </div>
-            <button class="btn btn-primary" onclick="alerta()">Enviar</button>
+            <button class="btn btn-primary" onsubmit="cadastrarAnuncio()">Enviar</button>
             </div>
 			    </fieldset>
 		    </form>

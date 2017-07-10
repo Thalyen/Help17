@@ -18,7 +18,7 @@ function getDenuncia() {
             /*});*/
         }
     };
-    var url = "https://viacep.com.br/ws/01001000/json/";
+    var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/denuncia";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
@@ -88,7 +88,7 @@ function getAnuncios() {
             /*});*/
         }
     };
-    var url = "https://viacep.com.br/ws/59032190/json/";
+    var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/anuncio";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
@@ -112,7 +112,7 @@ function getClinicas() {
             /*});*/
         }
     };
-    var url = "https://viacep.com.br/ws/01001000/json/";
+    var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/clinicas";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
@@ -134,7 +134,7 @@ function getEventos() {
             /*});*/
         }
     };
-    var url = "https://viacep.com.br/ws/01001000/json/";
+    var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/eventos";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
@@ -156,7 +156,7 @@ function getOngs() {
             /*});*/
         }
     };
-    var url = "https://viacep.com.br/ws/01001000/json/";
+    var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/ongs";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
@@ -178,7 +178,7 @@ function getPets() {
             /*});*/
         }
     };
-    var url = "https://viacep.com.br/ws/01001000/json/";
+    var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/clinicas";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 }
@@ -250,7 +250,7 @@ function getAdocao() {
             /*});*/
         }
     };
-    var url = "https://viacep.com.br/ws/01001000/json/";
+    var url = "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/experiencia";
     xmlhttp.open("GET", url, true);
     xmlhttp.send();
 } 

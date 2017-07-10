@@ -20,7 +20,8 @@
   	    <link rel="stylesheet" href="css/Menu.css">
         <!--CSS do card-->
         <link rel="stylesheet" href="css/login.css">
-
+<!-- scripts de envio ws -->
+          <script src="login.js"></script>
 	 </head>
 
 <body>
@@ -87,7 +88,7 @@
             <form class="form-signin">
                 <input type="email" id="emailLogin" class="form-control" placeholder="Email" required autofocus>
                 <input type="password" id="senhaLogin" class="form-control" placeholder="Senha" required>
-                <a href="inicial.html" class="btn btn-warning" style="width: 100%">Entrar</a>
+                <a href="../index/index.html" class="btn btn-warning" style="width: 100%" onsubmit="logar()">Entrar</a>
                 <br/>
                 <br/> 
                 <a class="btn btn-block btn-social btn-facebook">

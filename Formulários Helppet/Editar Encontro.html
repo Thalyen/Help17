@@ -20,6 +20,8 @@
   	    <link rel="stylesheet" href="BootstrapPaper.css">
   	    <!--CSS do menu-->
   	    <link rel="stylesheet" href="Menu.css">
+            <!-- scripts de envio ws -->
+          <script src="cadastrar.js"></script>
 	 </head>
 
 <body>
@@ -148,7 +150,7 @@
               <input type="text" name="form-titulo" placeholder="Hora" class="form-titulo form-control" id="hora" required="">
             </div>
             <button class="btn btn-danger" onclick="">Cancelar</button>
-            <button style="margin-left: 55%" class="btn btn-success" onclick="">Salvar</button>
+            <button style="margin-left: 55%" class="btn btn-success" onsubmit="editarEncontro()">Salvar</button>
             
             </div>
 			    </fieldset>

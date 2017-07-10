@@ -20,6 +20,8 @@
   	    <link rel="stylesheet" href="BootstrapPaper.css">
   	    <!--CSS do menu-->
   	    <link rel="stylesheet" href="Menu.css">
+            <!-- scripts de envio ws -->
+          <script src="cadastrar.js"></script>
 	 </head>
 
 <body>
@@ -147,7 +149,7 @@
             <div class="form-group">
               <input type="text" name="form-titulo" placeholder="Hora" class="form-titulo form-control" id="hora" required="">
             </div>
-            <button class="btn btn-primary" onclick="">Marcar Encontro</button>
+                            <button class="btn btn-primary" onsubmit="cadastrarEncontro()">Marcar Encontro</button>
             <!--redireciona para a pagina de meus encontros-->
             </div>
 			    </fieldset>

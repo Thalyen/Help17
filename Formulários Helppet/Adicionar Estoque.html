@@ -21,7 +21,8 @@
   	    <link rel="stylesheet" href="BootstrapPaper.css">
   	    <!--CSS do menu-->
   	    <link rel="stylesheet" href="Menu.css">
-        
+        <!-- scripts de envio ws -->
+          <script src="cadastrar.js"></script>
 	 </head>
 
 <body>
@@ -139,7 +140,7 @@
               <input type="text" name="form-bairro" placeholder="Necessidade Atual" class="form-bairro form-control" id="qtdAtual">
             </div>
             <br/>
-            <button class="btn btn-primary" onclick="alerta()">Cadastrar</button>
+            <button class="btn btn-primary" onsubmit="cadastrarEstoque()">Cadastrar</button>
             </div>
 			    </fieldset>
 		    </form>

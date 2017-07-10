@@ -22,7 +22,8 @@
   	    <link rel="stylesheet" href="BootstrapPaper.css">
   	    <!--CSS do menu-->
   	    <link rel="stylesheet" href="Menu.css">
-
+<!-- scripts de envio ws -->
+          <script src="cadastrar.js"></script>
 	 </head>
 
 <body>
@@ -149,7 +150,7 @@
 				    <div class="form-group">
 				      <textarea name="form-about-yourself" placeholder="Conte sua experiência!" class="form-about-yourself form-control" id="descricao" required=""></textarea>
 				    </div>
-            <button class="btn btn-primary" onclick="enviardados()">Enviar</button>
+            <button class="btn btn-primary" onsubmit="cadastrarExperiencia()">Enviar</button>
             </div>
 			    </fieldset>
 		    </form>
