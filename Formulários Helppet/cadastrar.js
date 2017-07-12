@@ -123,26 +123,29 @@ function editarDenuncia() {
 
 function cadastrarDenuncia() {
     var xhttp = new XMLHttpRequest();
+     xhttp.open("POST", "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/denuncia", true);
+     xhttp.setRequestHeader("Content-type", "application/json");
 
     var denuncia = {};
-    denuncia.tituloDenuncia = document.getElementById("titulo").value;
-    denuncia.tipoDenuncia = document.getElementById("tipo").value;
-    denuncia.localizacao = document.getElementById("estado").value + document.getElementById("cidade").value + document.getElementById("bairro").value;
-    denuncia.fotoDenuncia = document.getElementById("foto").value;
-    denuncia.dataDenuncia = new Date().getTime();
-    denuncia.descricaoDenuncia = document.getElementById("descricao").value;
-
-    var cadastrado = JSON.stringify(denuncia);
-
+    denuncia.titulo = document.getElementById("titulo").value;
+    denuncia.tipo = document.getElementById("tipo").value;
+    denuncia.localizacao = document.getElementById("estado").value +", "+ document.getElementById("cidade").value +", "+ document.getElementById("bairro").value;
+    denuncia.foto = document.getElementById("foto").value;
+    denuncia.data = "07/2017";
+    denuncia.descricao = document.getElementById("descricao").value;
+    
+    denuncia = JSON.stringify(denuncia);
+   alert(denuncia);
     xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            alert(this.responseText);
 
+        if (this.readyState === 4 && this.status === 200) {
+            alert("foi");
+
+        }else{
+            alert("Não deu");
         }
     };
-    xhttp.open("POST", "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/denuncia", true);
-    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(cadastrado);
+    xhttp.send(denuncia);
 }
 
 function cadastrarEventos() {
@@ -337,3 +340,4 @@ function cadastrarEstoque() {
     // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(cadastrado);
 }
+
