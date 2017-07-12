@@ -125,13 +125,12 @@ function cadastrarDenuncia() {
     var xhttp = new XMLHttpRequest();
 
     var denuncia = {};
-    denuncia.titulo = document.getElementById("titulo").value;
-    denuncia.tipo = document.getElementById("tipo").value;
-    denuncia.estado = document.getElementById("estado").value;
-    denuncia.cidade = document.getElementById("cidade").value;
-    denuncia.bairro = document.getElementById("bairro").value;
-    denuncia.foto = document.getElementById("foto").value;
-    denuncia.descricao = document.getElementById("descricao").value;
+    denuncia.tituloDenuncia = document.getElementById("titulo").value;
+    denuncia.tipoDenuncia = document.getElementById("tipo").value;
+    denuncia.localizacao = document.getElementById("estado").value + document.getElementById("cidade").value + document.getElementById("bairro").value;
+    denuncia.fotoDenuncia = document.getElementById("foto").value;
+    denuncia.dataDenuncia = new Date().getTime();
+    denuncia.descricaoDenuncia = document.getElementById("descricao").value;
 
     var cadastrado = JSON.stringify(denuncia);
 
