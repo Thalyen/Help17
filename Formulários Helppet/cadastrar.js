@@ -141,7 +141,7 @@ function cadastrarDenuncia() {
         }
     };
     xhttp.open("POST", "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/denuncia", true);
-    // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send(cadastrado);
 }
 
