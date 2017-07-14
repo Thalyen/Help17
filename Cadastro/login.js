@@ -1,63 +1,72 @@
 function cadastrarUsuario() {
-    var xhttp = new XMLHttpRequest();
-
-    var usuario = {};
-    usuario.tipo = document.getElementById("tipo").value;
-    usuario.nome = document.getElementById("nome").value;
-    usuario.email = document.getElementById("email").value;
-    usuario.senha = document.getElementById("senha").value;
-
-    var cadastrado = JSON.stringify(usuario);
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            alert(this.responseText);
-
+      $.ajax({
+        type: "POST",
+        url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/usuario",
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify({
+            nome: $("#senha").val(),
+            email: $("#email").val(),
+            senha: $("#senha").val()
+        }),
+     success: function () {
+          alert("Cadastrado com sucesso");
+        },
+        error: function () {
+            alert("A ação não pode ser concluída");
+        },
+        complete: function () {
+            // Handle the complete event
+            window.location.href = "../index/index.html";
         }
-    };
-    xhttp.open("POST", "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/usuario", true);
-    // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(cadastrado);
+    });
 }
 
 function editarUsuario() {
-    var xhttp = new XMLHttpRequest();
-
-    var usuario = {};
-    usuario.tipo = document.getElementById("tipo").value;
-    usuario.nome = document.getElementById("nome").value;
-    usuario.email = document.getElementById("email").value;
-    usuario.senha = document.getElementById("senha").value;
-
-    var cadastrado = JSON.stringify(usuario);
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            alert(this.responseText);
-
+        $.ajax({
+        type: "PUT",
+        url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/usuario",
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify({
+            nome: $("#senha").val(),
+            email: $("#email").val(),
+            senha: $("#senha").val()
+        }),
+     success: function () {
+            alert("Editado com sucesso");
+        },
+        error: function () {
+            alert("A ação não pode ser concluída");
+        },
+        complete: function () {
+            // Handle the complete event
+            window.location.href = "../index/index.html";
         }
-    };
-    xhttp.open("PUT", "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/usuario", true);
-    // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(cadastrado);
+    });
 }
 
 function logar() {
-    var xhttp = new XMLHttpRequest();
-
-    var login = {};
-    login.email = document.getElementById("email").value;
-    login.senha = document.getElementById("senha").value;
-
-    var cadastrado = JSON.stringify(login);
-
-    xhttp.onreadystatechange = function () {
-        if (this.readyState === 4 && this.status === 200) {
-            alert(this.responseText);
-
+    $.ajax({
+        type: "POST",
+        url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/login",
+        contentType: "application/json",
+        dataType: "json",
+        data: JSON.stringify({
+            email: $("#email").val(),
+            senha: $("#senha").val()
+        }),
+     success: function (data) {
+            console.log("logado");
+            var dados = JSON.stringify(data);
+            sessionStorage.setItem('usuario', dados);
+        },
+        error: function () {
+            alert("A ação não pode ser concluída");
+        },
+        complete: function () {
+            // Handle the complete event
+            window.location.href = "../index/index.html";
         }
-    };
-    xhttp.open("POST", "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/logar", true);
-    // xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send(cadastrado);
+    });
 }
