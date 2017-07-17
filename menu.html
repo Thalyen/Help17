@@ -1,0 +1,89 @@
+  <!-- scripts de envio ws -->
+  <script src="js/listarUser.js"></script>
+
+<!--MENU -->
+<nav class="navbar navbar-default navbar-static-top"  style="color: #ffffff;">
+    <div class="container-fluid">
+        <div class="navbar-header" style="padding-bottom: 5%">  
+            <a class="navbar-brand"  href="index.html"><img src="img/Logo HelpPet.jpg" class="logo_menu"></a>
+        </div>
+    </div>
+
+    <!--PART2 NAV-->
+    <nav class="container-fluid menu">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="margin-left: 26%">
+
+            <ul class="nav navbar-nav">
+                <li><a href="Listagem_Animal.html" style="color:#3498db">Animais <span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="Listagem_Ongs.html" style="color:#3498db">ONGs <span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="Listagem_Clinicas.html" style="color:#3498db">Clinicas/Pet Shops <span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="Experiencias.html" style="color:#3498db">Experiências <span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="Listagem_Eventos.html" style="color:#3498db">Eventos <span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="Listagem_Anuncios.html" style="color:#3498db">Anúncios <span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="Listagem_Denuncia.html" style="color:#3498db">Denúncias <span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right" id="show">
+                <li><a href="Login.html" style="color:#3498db" id="entrar">Entrar<span class="sr-only"></span></a></li>
+                <li><a href="Cadastro.html" style="color:#3498db">Cadastro <span class="sr-only"></span></a></li>
+            </ul>
+            <ul class="navbar-nav navbar-right item">
+                <!--profile picture style="display: none"-->
+                <li class="dropdown"  id="hide" >
+                    <a href="#"  data-toggle="dropdown"><div class="fb-profile" >
+                            <img align="right" class="fb-image-profile thumbnail" src="img/xiu.png"  style="margin-left: auto;" alt="Image usuario"/>
+                        </div> 
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="Perfil_User.html">Meu Perfil <span class="glyphicon glyphicon-user pull-right position-dropdown"></span></a></li>
+                        <li><a onclick="getAnimaisUser()">Meus Animais <span class="glyphicon glyphicon-heart pull-right position-dropdown"></span></a></li>
+                        <li><a onclick="getEventosUser()">Meus Eventos <span class="glyphicon glyphicon-pushpin pull-right position-dropdown" ></span></a></li>
+                        <li><a onclick="getAnunciosUser()">Meus Anuncios<span class="glyphicon glyphicon-paperclip pull-right position-dropdown"></span></a></li>
+                        <li class="divider"></li>
+                        <li><a onclick="getExperienciasUser()">Experiências<span class="glyphicon glyphicon-globe pull-right position-dropdown"></span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="Form Animal.html">Cadastrar Animal<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                        <li><a href="Form Eventos.html">Cadastrar Evento<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                        <li><a href="Form Anuncio.html">Cadastrar Anuncio<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                        <li><a href="Form Denuncia.html">Cadastrar Denuncia<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="index.html" onclick=" localStorage.setItem('usuario', null);" id="sair">Sair <span class="glyphicon glyphicon-log-out pull-right position-dropdown"></span></a></li>
+                    </ul>
+                </li>
+                <!--end profile pic-->
+            </ul>
+        </div>
+    </nav>
+    <!--end PART2 NAV-->
+</nav>
+<!--END MENU -->
+
+<script>
+    if(localStorage.getItem('usuario') !== null){
+    $("#hide").show();
+     $("#show").hide();
+ }else{
+    $("#show").show();
+     $("#hide").hide();
+};
+</script>

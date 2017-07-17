@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>    
+        <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+        <script src="https://github.com/makeusabrew/bootbox/releases/download/v4.4.0/bootbox.min.js"></script>
+
+        <title>Cadastro De Animal</title>
+        <!-- CSS -->
+        <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/form-elements.css">
+         <!--   <link rel="stylesheet" href="css/style.css">--> 
+        <link rel="stylesheet" href="css/BootstrapPaper.css">
+        <!--CSS do menu-->
+        <link rel="stylesheet" href="Menu.css">
+        <!-- scripts de envio ws -->
+        <script src="js/cadastrar.js"></script>
+    </head>
+    <body>
+
+        <!-- include w3c -->
+        <script src="https://www.w3schools.com/lib/w3.js"></script>
+        <div w3-include-html="menu.html"></div> 
+        <script>
+            w3.includeHTML();
+        </script>
+
+        <!-- Top content -->
+        <div class="top-content">
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                            <h1>Cadastro de Animal</h1>
+                            <div class="description">
+                                <h4 style="color: #ffffff"> </h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                            <form role="form"  class="registration-form" id="dados">
+                                <fieldset>
+                                    <div class="form-top">
+                                        <div class="form-top-left">
+                                            <h3>Animal</h3>
+                                        </div>
+                                        <div class="form-top-right">
+                                        </div>
+                                    </div>
+                                    <div class="form-bottom">
+                                        <div class="form-group">
+                                            <input type="text" name="form-titulo" placeholder="Nome" class="form-titulo form-control" id="nome">
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" id="raca">
+                                                <option>Raça</option>
+                                                <option>siames</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" id="especie">
+                                                <option>Espécie</option>
+                                                <option>gato</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" id="idade">
+                                                <option>Idade</option>
+                                                <option>0 meses a 1 ano</option>
+                                                <option>1 ano e  2 anos</option>
+                                                <option>2 ano e  3 anos</option>
+                                                <option>3 ano e  4 anos</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group">
+                                            <select class="form-control" id="sexo">
+                                                <option>Sexo</option>
+                                                <option>macho</option>
+                                                <option>fêmea</option>
+                                            </select>
+                                        </div>
+                                        <div class="control-group">
+                                            <label class="control-label"><h5>Foto</h5></label>
+                                            <div class="controls">
+                                                <input id="foto" name="foto" class="input-file" type="file">
+                                            </div>
+                                        </div>
+                                        <br/>
+                                        <div class="form-group">
+                                            <textarea name="form-about-yourself" placeholder="Descreva seu bichinho!" class="form-about-yourself form-control" id="descricao"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary" onclick="cadastrarAnimal()">Enviar</button>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Javascript -->
+        <script src="assets/js/jquery-1.11.1.min.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/jquery.backstretch.min.js"></script>
+        <script src="assets/js/background_animal.js"></script>
+        <script src="validaçãoAnimal.js"></script>
+
+    </body>
+</html>
