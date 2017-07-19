@@ -19,7 +19,8 @@
   	    <!--CSS do menu-->
   	    <link rel="stylesheet" href="css/Menu.css">
         <!--CSS do card-->
-        <link rel="stylesheet" href="css/cadastro.css">
+         <link rel="stylesheet" href="css/style.css">
+         <link rel="stylesheet" href="css/cadastro.css">
 <!-- scripts de envio ws -->
           <script src="js/login.js"></script>
 	 </head>
@@ -41,12 +42,11 @@
             <img id="profile-img" class="profile-img-card" src="img/logo.png" />
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin">
-              <select class="form-control" id="tipoUsuario">
+              <select class="form-control" id="permissao">
                 <option>Tipo</option>
-                <option>Helper</option>
-                <option>Ong</option>
-                <option>Clinica</option>
-                <option>PetShop</option>
+                <option id="1">Helper</option>
+                <option id="2">Ong</option>
+                <option id="3">Clinica/PetShop</option>
               </select>
                 <input type="email" id="nomeCadastro" class="form-control" placeholder="Nome" required autofocus>
                 <input type="email" id="emailCadastro" class="form-control" placeholder="Email" required autofocus>

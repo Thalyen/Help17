@@ -196,4 +196,19 @@ function getPerfilUser() {
     getAnimaisUser();
     getEventosUser();
     getExperienciasUser();
+    status();
 }
+
+   function status() {
+        var user = JSON.parse(localStorage.getItem('usuario'));
+        
+        alertd(user);
+        if (user !== null) {
+            document.getElementById("perfil").style.display = "text";
+            document.getElementById("log").style.display = "none";
+        } else {
+            document.getElementById("log").style.display = "text";
+            document.getElementById("perfil").style.display = "none";
+        }
+        ;
+    }

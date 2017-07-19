@@ -1,5 +1,6 @@
-
 function cadastrarAnuncio() {
+    var user = JSON.parse(localStorage.getItem('usuario'));
+    
     $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/anuncio",
@@ -10,7 +11,8 @@ function cadastrarAnuncio() {
             descricao: $("#descricao").val(),
             localzacao: $("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
             foto: $("#foto").val(),
-            data: "07/2017"
+            data: "07/2017",
+             idUsuario: user.id
         }),
         success: function () {
             alert("Cadastrado com sucesso");
@@ -20,7 +22,7 @@ function cadastrarAnuncio() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Anuncio.html";
+            window.location.href = "Listagem_Anuncio.html";
         }
     });
 }
@@ -46,7 +48,7 @@ function editarAnuncio() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Anuncio.html";
+            window.location.href = "Listagem_Anuncio.html";
         }
     });
 }
@@ -73,7 +75,7 @@ function editarDenuncia() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Denuncia.html";
+            window.location.href = "Listagem_Denuncia.html";
         }
     });
 }
@@ -100,7 +102,7 @@ function cadastrarDenuncia() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Denuncia.html";
+            window.location.href = "Listagem_Denuncia.html";
         }
     });
 }
@@ -129,7 +131,7 @@ function cadastrarAnimal() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Animal.html";
+            window.location.href = "Listagem_Animal.html";
         }
     });
 }
@@ -158,12 +160,14 @@ function editarAnimal() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Animal.html";
+            window.location.href = "Listagem_Animal.html";
         }
     });
 }
 
 function cadastrarEventos() {
+    var user = JSON.parse(localStorage.getItem('usuario'));
+     
  $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/evento",
@@ -176,7 +180,8 @@ function cadastrarEventos() {
             foto: $("#foto").val(),
             descricao: $("#descricao").val(),
             data: $("#data").val(),
-            horario: $("#horario").val()
+            horario: $("#horario").val(),
+             idUsuario: user.id
         }),
      success: function () {
             alert("Cadastrado com sucesso");
@@ -186,7 +191,7 @@ function cadastrarEventos() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Eventos.html";
+            window.location.href = "Listagem_Eventos.html";
         }
     });
 }
@@ -214,7 +219,7 @@ function editarEventos() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Eventos.html";
+            window.location.href = "Listagem_Eventos.html";
         }
     });
 }
@@ -240,7 +245,7 @@ function editarEncontro() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Animal.html";
+            window.location.href = "Listagem_Animal.html";
         }
     });
 }
@@ -266,22 +271,25 @@ function cadastrarEncontro() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Animal.html";
+            window.location.href = "Listagem_Animal.html";
         }
     });
 }
 
 function cadastrarExperiencia() {
-  $.ajax({
+     var user = JSON.parse(localStorage.getItem('usuario'));
+
+    $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/experiencia",
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify({
             titulo: $("#titulo").val(),
-            categoria: $("#categoria"),
+            tipo: $("#categoria"),
             foto: $("#foto").val(),
-            descricao: $("#descricao").val()
+            descricao: $("#descricao").val(),
+            idUsuario: user.id
         }),
      success: function () {
             alert("Cadastrado com sucesso");
@@ -291,7 +299,7 @@ function cadastrarExperiencia() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Experiencia.html";
+            window.location.href = "Experiencias.html";
         }
     });
 }
@@ -316,7 +324,7 @@ function editarExperiencia() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Experiencia.html";
+            window.location.href = "Listagem_Experiencia.html";
         }
     });
 }
@@ -341,7 +349,7 @@ function editarEstoque() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Estoque.html";
+            window.location.href = "Listagem_Estoque.html";
         }
     });
 }
@@ -366,7 +374,7 @@ function cadastrarEstoque() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../Listagem/Listagem_Estoque.html";
+            window.location.href = "Listagem_Estoque.html";
         }
     });
 }

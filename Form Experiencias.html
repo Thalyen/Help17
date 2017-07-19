@@ -18,12 +18,13 @@
         <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
   	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
   		  <link rel="stylesheet" href="css/form-elements.css">
-         <!--   <link rel="stylesheet" href="css/style.css">--> 
+ <link rel="stylesheet" href="css/style.css">
+         <link rel="stylesheet" href="css/cadastro.css">
   	    <link rel="stylesheet" href="css/BootstrapPaper.css">
   	    <!--CSS do menu-->
   	    <link rel="stylesheet" href="css/Menu.css">
 <!-- scripts de envio ws -->
-          <script src="cadastrar.js"></script>
+          <script src="js/cadastrar.js"></script>
 	 </head>
 
 <body>
@@ -49,7 +50,7 @@
       </div>
     <div class="row">
       <div class="col-sm-6 col-sm-offset-3 form-box">
-        <form role="form" action="" method="post" class="registration-form" name="dados">
+        <form role="form"  class="registration-form" name="dados">
           <fieldset>
 		        <div class="form-top">
 		        <div class="form-top-left">
@@ -81,7 +82,7 @@
 				    <div class="form-group">
 				      <textarea name="form-about-yourself" placeholder="Conte sua experiência!" class="form-about-yourself form-control" id="descricao" required=""></textarea>
 				    </div>
-            <button class="btn btn-primary" onsubmit="cadastrarExperiencia()">Enviar</button>
+            <button class="btn btn-primary" onclick="cadastrarExperiencia()">Enviar</button>
             </div>
 			    </fieldset>
 		    </form>

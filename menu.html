@@ -1,5 +1,5 @@
-  <!-- scripts de envio ws -->
-  <script src="js/listarUser.js"></script>
+<!-- scripts de envio ws -->
+<script src="js/listarUser.js"></script>
 
 <!--MENU -->
 <nav class="navbar navbar-default navbar-static-top"  style="color: #ffffff;">
@@ -43,14 +43,14 @@
             <ul class="nav navbar-nav">
                 <li><a href="Listagem_Denuncia.html" style="color:#3498db">Denúncias <span class="sr-only"></span></a></li>
             </ul>
-            <ul class="nav navbar-nav navbar-right" id="show">
+            <ul class="nav navbar-nav navbar-right" id="log" >
                 <li><a href="Login.html" style="color:#3498db" id="entrar">Entrar<span class="sr-only"></span></a></li>
                 <li><a href="Cadastro.html" style="color:#3498db">Cadastro <span class="sr-only"></span></a></li>
             </ul>
-            <ul class="navbar-nav navbar-right item">
+            <ul class="navbar-nav navbar-right item" id="perfil">
                 <!--profile picture style="display: none"-->
-                <li class="dropdown"  id="hide" >
-                    <a href="#"  data-toggle="dropdown"><div class="fb-profile" >
+                <li class="dropdown" >
+                    <a href="#"  data-toggle="dropdown"><div class="fb-profile">
                             <img align="right" class="fb-image-profile thumbnail" src="img/xiu.png"  style="margin-left: auto;" alt="Image usuario"/>
                         </div> 
                     </a>
@@ -66,6 +66,7 @@
                         <li><a href="Form Eventos.html">Cadastrar Evento<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
                         <li><a href="Form Anuncio.html">Cadastrar Anuncio<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
                         <li><a href="Form Denuncia.html">Cadastrar Denuncia<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
+                        <li><a href="Form Experiencias.html">Cadastrar Experiência<span class="glyphicon glyphicon-edit pull-right position-dropdown"></span></a></li>
                         <li class="divider"></li>
                         <li><a href="index.html" onclick=" localStorage.setItem('usuario', null);" id="sair">Sair <span class="glyphicon glyphicon-log-out pull-right position-dropdown"></span></a></li>
                     </ul>
@@ -78,12 +79,3 @@
 </nav>
 <!--END MENU -->
 
-<script>
-    if(localStorage.getItem('usuario') !== null){
-    $("#hide").show();
-     $("#show").hide();
- }else{
-    $("#show").show();
-     $("#hide").hide();
-};
-</script>
