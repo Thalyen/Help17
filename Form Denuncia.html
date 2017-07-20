@@ -16,23 +16,22 @@
         <!-- CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/form-elements.css">
-         <link rel="stylesheet" href="css/style.css">
-         <link rel="stylesheet" href="css/cadastro.css">
+        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/BootstrapPaper.css">
         <!--CSS do menu-->
         <link rel="stylesheet" href="css/Menu.css">
         <!-- scripts de envio ws -->
-        <script src="js/cadastrar.js"></script>
+        <script src="cadastrar.js"></script>
     </head>
 
     <body>
-        <!-- include w3c -->
+        
+          <!-- include w3c -->
         <script src="https://www.w3schools.com/lib/w3.js"></script>
-        <div w3-include-html="menu.html"></div> 
+        <div w3-include-html="Menu Usuario.html"></div> 
         <script>
             w3.includeHTML();
         </script>
-
         <!-- Top content -->
         <div class="top-content">
             <div class="inner-bg">
@@ -48,7 +47,7 @@
                     <div class="row">
                         <div class="col-sm-6 col-sm-offset-3 form-box">
                             <!--inicio do formulario-->
-                            <form role="form" >
+                            <form role="form" class="registration-form">
                                 <fieldset>
                                     <div class="form-top">
                                         <div class="form-top-left">
@@ -59,7 +58,7 @@
                                     </div>
                                     <div class="form-bottom">
                                         <div class="form-group">
-                                            <input type="text" placeholder="Título" class="form-titulo form-control" id="titulod">
+                                            <input type="text" name="titulo" placeholder="Título" class="form-titulo form-control" id="titulod">
                                         </div>
                                         <div class="form-group">
                                             <select class="form-control" id="tipo">
@@ -79,22 +78,22 @@
                                             </select>
                                         </div>
                                         <div class="form-group">
-                                            <input type="text" placeholder="Cidade" class="form-cidade form-control" id="cidade">
+                                            <input type="text" name="cidade" placeholder="Cidade" class="form-cidade form-control" id="cidade">
                                         </div>
                                         <div class="form-group">
-                                            <input type="text"  placeholder="Bairro" class="form-bairro form-control" id="bairro">
+                                            <input type="text" name="bairro" placeholder="Bairro" class="form-bairro form-control" id="bairro">
                                         </div>
                                         <div class="control-group">
                                             <label class="control-label"><h5>Foto</h5></label>
                                             <div class="controls">
-                                                <input id="foto"  class="input-file" type="file">
+                                                <input id="foto" name="foto" class="input-file" type="file">
                                             </div>
                                         </div>
                                         <br/>
                                         <div class="form-group">
-                                            <textarea placeholder="Descreva sua denúncia!" class="form-about-yourself form-control" id="descricao"></textarea>
+                                            <textarea name="descricao" placeholder="Descreva sua denúncia!" class="form-about-yourself form-control" id="descricao"></textarea>
                                         </div>
-                                        <button class="btn btn-primary" onclick="cacetada()">Enviar</button>
+                                        <button class="btn btn-primary" onclick="cadastrarDenuncia()">Enviar</button>
                                     </div>
                                 </fieldset>
                             </form>
@@ -107,5 +106,14 @@
 
     </body>
 
-   
+        <script src="js/jquery-1.11.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.backstretch.min.js"></script>
+        <script src="js/background_denuncia.js"></script>
+        <script src="js/validaçãoAnimal.js"></script>
+    <script>
+    function alerta() {
+        alert("Obrigada, sua denúncia foi cadastrada!");
+    }
+    </script>
 </html>

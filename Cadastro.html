@@ -19,21 +19,22 @@
   	    <!--CSS do menu-->
   	    <link rel="stylesheet" href="css/Menu.css">
         <!--CSS do card-->
-         <link rel="stylesheet" href="css/style.css">
-         <link rel="stylesheet" href="css/cadastro.css">
+        <link rel="stylesheet" href="css/cadastro.css">
 <!-- scripts de envio ws -->
-          <script src="js/login.js"></script>
+          <script src="login.js"></script>
 	 </head>
 
 <body>
-    
+
+ <!--MENU -->
+   
   <!-- include w3c -->
         <script src="https://www.w3schools.com/lib/w3.js"></script>
-        <div w3-include-html="menu.html"></div> 
+        <div w3-include-html="Menu Usuario.html"></div> 
         <script>
             w3.includeHTML();
         </script>
-        
+
         <!-- Formulário de cadastro de usuário -->
          <div class="container">
           <div class="card card-container">
@@ -42,11 +43,12 @@
             <img id="profile-img" class="profile-img-card" src="img/logo.png" />
             <p id="profile-name" class="profile-name-card"></p>
             <form class="form-signin">
-              <select class="form-control" id="permissao">
+              <select class="form-control" id="tipoUsuario">
                 <option>Tipo</option>
-                <option id="1">Helper</option>
-                <option id="2">Ong</option>
-                <option id="3">Clinica/PetShop</option>
+                <option>Helper</option>
+                <option>Ong</option>
+                <option>Clinica</option>
+                <option>PetShop</option>
               </select>
                 <input type="email" id="nomeCadastro" class="form-control" placeholder="Nome" required autofocus>
                 <input type="email" id="emailCadastro" class="form-control" placeholder="Email" required autofocus>

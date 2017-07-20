@@ -90,10 +90,10 @@ form .form-bottom button.btn {
 form .form-bottom .input-error {
 	border-color: #19b9e7;
 }
-/*
+
 form.registration-form fieldset {
 	display: none;
-}*/
+}
 
 
 /***** Media queries *****/

@@ -1,28 +1,28 @@
 function cadastrarAnuncio() {
-    var user = JSON.parse(localStorage.getItem('usuario'));
-    
+   // var user = JSON.parse(localStorage.getItem('usuario'));
+
     $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/anuncio",
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify({
-            nome: $("#nomeAnuncio").val(),
-            descricao: $("#descricao").val(),
-            localzacao: $("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
-            foto: $("#foto").val(),
-            data: "07/2017",
-             idUsuario: user.id
+            titulo: $("#titulo").val()
+            //descricao: $("#descricao").val()
+           // foto: $("#foto").val()
+           // data: "07/2017",
+           // idUsuario: user.id
         }),
         success: function () {
             alert("Cadastrado com sucesso");
+            //window.location.href = "Listagem_Anuncio.html";
         },
         error: function () {
             alert("A ação não pode ser concluída");
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "Listagem_Anuncio.html";
+            
         }
     });
 }
@@ -94,7 +94,7 @@ function cadastrarDenuncia() {
             foto: $("#foto").val(),
             data: "07/2017"
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {
@@ -108,10 +108,10 @@ function cadastrarDenuncia() {
 }
 
 function cadastrarAnimal() {
- $.ajax({
+    $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/animal",
-        contentType: "application/json",
+        contentType: "application/json; charset=utf-8",
         dataType: "json",
         data: JSON.stringify({
             nome: $("#nome").val(),
@@ -120,18 +120,18 @@ function cadastrarAnimal() {
             sexo: $("#sexo").val(),
             idade: $("#idade").val(),
             foto: $("#foto").val(),
-            descricao: $("#descricao").val(),
-            data: "07/2017"
+            descricao: $("#descricao").val()
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
+            window.location.href = "Listagem_Animal.html";
         },
         error: function () {
             alert("A ação não pode ser concluída");
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "Listagem_Animal.html";
+
         }
     });
 }
@@ -152,7 +152,7 @@ function editarAnimal() {
             descricao: $("#descricao").val(),
             data: "07/2017"
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {
@@ -166,24 +166,24 @@ function editarAnimal() {
 }
 
 function cadastrarEventos() {
-    var user = JSON.parse(localStorage.getItem('usuario'));
-     
- $.ajax({
+    //  var user = JSON.parse(localStorage.getItem('usuario'));
+
+    $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/evento",
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify({
             nome: $("#nome").val(),
-            localzacao: $("#rua").val() + ", " +$("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
+            localzacao: $("#rua").val() + ", " + $("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
             complemento: $("#complemento").val(),
             foto: $("#foto").val(),
-            descricao: $("#descricao").val(),
-            data: $("#data").val(),
-            horario: $("#horario").val(),
-             idUsuario: user.id
+            descricao: $("#descricao").val()
+                    //data: "20/07/2017",
+                    //horario: "10:00"
+                    //responsavel: user.id
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {
@@ -197,21 +197,21 @@ function cadastrarEventos() {
 }
 
 function editarEventos() {
-     $.ajax({
+    $.ajax({
         type: "PUT",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/evento",
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify({
             nome: $("#nome").val(),
-            localzacao: $("#rua").val() + ", " +$("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
+            localzacao: $("#rua").val() + ", " + $("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
             complemento: $("#complemento").val(),
             foto: $("#foto").val(),
             descricao: $("#descricao").val(),
             data: $("#data").val(),
             horario: $("#horario").val()
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {
@@ -225,19 +225,19 @@ function editarEventos() {
 }
 
 function editarEncontro() {
-     $.ajax({
+    $.ajax({
         type: "PUT",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/encontro",
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify({
             nome: $("#nome").val(),
-            localzacao: $("#rua").val() + ", " +$("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
+            localzacao: $("#rua").val() + ", " + $("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
             complemento: $("#complemento").val(),
             data: $("#data").val(),
             horario: $("#horario").val()
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {
@@ -251,19 +251,19 @@ function editarEncontro() {
 }
 
 function cadastrarEncontro() {
-     $.ajax({
+    $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/encontro",
         contentType: "application/json",
         dataType: "json",
         data: JSON.stringify({
             nome: $("#nome").val(),
-            localzacao: $("#rua").val() + ", " +$("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
+            localzacao: $("#rua").val() + ", " + $("#bairro").val() + ", " + $("#cidade").val() + ", " + $("#estado").val(),
             complemento: $("#complemento").val(),
             data: $("#data").val(),
             horario: $("#horario").val()
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {
@@ -277,29 +277,30 @@ function cadastrarEncontro() {
 }
 
 function cadastrarExperiencia() {
-     var user = JSON.parse(localStorage.getItem('usuario'));
+    //var user = JSON.parse(localStorage.getItem('usuario'));
 
     $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/experiencia",
-        contentType: "application/json",
+        contentType: "application/json; charset=utf-8",
         dataType: "json",
         data: JSON.stringify({
             titulo: $("#titulo").val(),
-            tipo: $("#categoria"),
+            categoria: $("#categoria"),
             foto: $("#foto").val(),
             descricao: $("#descricao").val(),
-            idUsuario: user.id
+            responsavel: 6
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
+            window.location.href = "Experiencias.html";
         },
         error: function () {
             alert("A ação não pode ser concluída");
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "Experiencias.html";
+
         }
     });
 }
@@ -316,7 +317,7 @@ function editarExperiencia() {
             foto: $("#foto").val(),
             descricao: $("#descricao").val()
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {
@@ -330,7 +331,7 @@ function editarExperiencia() {
 }
 
 function editarEstoque() {
- $.ajax({
+    $.ajax({
         type: "PUT",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/experiencia",
         contentType: "application/json",
@@ -341,7 +342,7 @@ function editarEstoque() {
             diaria: $("#diaria").val(),
             atual: $("#atual").val()
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {
@@ -355,7 +356,7 @@ function editarEstoque() {
 }
 
 function cadastrarEstoque() {
-     $.ajax({
+    $.ajax({
         type: "POST",
         url: "http://helppettads-appnerd.rhcloud.com/HelpPetMaven/rest/experiencia",
         contentType: "application/json",
@@ -366,7 +367,7 @@ function cadastrarEstoque() {
             diaria: $("#diaria").val(),
             atual: $("#atual").val()
         }),
-     success: function () {
+        success: function () {
             alert("Cadastrado com sucesso");
         },
         error: function () {

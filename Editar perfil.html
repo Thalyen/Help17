@@ -14,48 +14,48 @@
         <title>Editar Perfil</title>
         <!-- CSS -->
         <script src="http://code.jquery.com/jquery-3.2.0.min.js"></script>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="css/BootstrapPaper.css">
-        <!--CSS do menu-->
-        <link rel="stylesheet" href="css/Menu.css">
+  	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"/>
+  	    <link rel="stylesheet" href="css/BootstrapPaper.css">
+  	    <!--CSS do menu-->
+  	    <link rel="stylesheet" href="css/Menu.css">
         <!--CSS do card-->
         <link rel="stylesheet" href="css/Editar Perfil.css">
 
-    </head>
+	 </head>
 
-    <body style="background-color: #1aa3ff">
-
-        <!-- include w3c -->
+<body>
+  <!-- include w3c -->
         <script src="https://www.w3schools.com/lib/w3.js"></script>
-        <div w3-include-html="menu.html"></div> 
+        <div w3-include-html="Menu Usuario.html"></div> 
         <script>
             w3.includeHTML();
         </script>
 
+<body style="background-color: #1aa3ff">
         <!-- Formulário de cadastro de usuário -->
-        <div class="container">
-            <div class="card card-container">
-                <div align="center" style="color: "><h4>Editar Perfil</h4>
+         <div class="container">
+          <div class="card card-container">
+          <div align="center" style="color: "><h4>Editar Perfil</h4>
+          </div>
+            <img id="profile-img" class="profile-img-card" src="img/xiu.png" /><!--foto do perfil logado-->
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin">
+                <div class="control-group">
+                  <label class="control-label"><h5>Foto</h5></label>
+                  <div class="controls">
+                    <input id="foto" name="foto" class="input-file" type="file">
+                  </div>
                 </div>
-                <img id="profile-img" class="profile-img-card" src="img/xiu.png" /><!--foto do perfil logado-->
-                <p id="profile-name" class="profile-name-card"></p>
-                <form class="form-signin">
-                    <div class="control-group">
-                        <label class="control-label"><h5>Foto</h5></label>
-                        <div class="controls">
-                            <input id="foto" name="foto" class="input-file" type="file">
-                        </div>
-                    </div>
-                    <input type="text" id="email" class="form-control" placeholder="Email" required autofocus>
-                    <input type="text" id="senha" class="form-control" placeholder="Senha" required>
-                    <br/>
-                    <br/>
-                    <a href="inicial.html" class="btn btn-success" style="width: 100%">Salvar</a>
-                    <br/>
-                    <br/> 
-                </form><!-- /form -->
-            </div><!-- /card-container -->
-        </div><!-- /container -->
+                <input type="text" id="email" class="form-control" placeholder="Email" required autofocus>
+                <input type="text" id="senha" class="form-control" placeholder="Senha" required>
+                <br/>
+                <br/>
+                <a href="inicial.html" class="btn btn-success" style="width: 100%">Salvar</a>
+                <br/>
+                <br/> 
+            </form><!-- /form -->
+        </div><!-- /card-container -->
+    </div><!-- /container -->
 
     </body>
 </html>

@@ -18,7 +18,7 @@ function cadastrarUsuario() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "ndex.html";
+            window.location.href = "index.html";
         }
     });
 }
@@ -42,7 +42,7 @@ function editarUsuario() {
         },
         complete: function () {
             // Handle the complete event
-            window.location.href = "../index/index.html";
+            window.location.href = "index.html";
         }
     });
 }
@@ -58,7 +58,7 @@ function logando() {
             var dados = data;
             dados = JSON.stringify(data);
             localStorage.setItem('usuario', dados);
-            // window.location.href = "index.html";
+            window.location.href = "index.html";
         },
         error: function () {
             alert("A ação não pode ser concluída ");
